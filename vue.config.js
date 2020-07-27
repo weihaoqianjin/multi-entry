@@ -1,5 +1,6 @@
 module.exports = {
   // 应用的架设路径，CLI默认你的项目部署在域名的根目录下所以publicPath默认为/
+  publicPath: '/',
   // 构建后的文件是否启用哈希命名
   filenameHashing: true,
   // 是否在save文件时lint代码, 需要先安装cli-plugin-eslint
@@ -11,7 +12,7 @@ module.exports = {
   pages: {
     alpha: {
       // 入口文件
-      entry: 'src/pages/alpha/main.js',
+      entry: 'src/pages/alpha/main.ts',
       // 入口的html文件位置
       template: 'public/alpha.html',
       // 入口html文件在构建后的输出文件名
@@ -22,7 +23,7 @@ module.exports = {
       chunks: ['chunk-vendors', 'chunk-common', 'alpha']
     },
     beta: {
-      entry: 'src/pages/beta/main.js',
+      entry: 'src/pages/beta/main.ts',
       template: 'public/beta.html',
       filename: 'beta.html',
       title: 'beta版',
